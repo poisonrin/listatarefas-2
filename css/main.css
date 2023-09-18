@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+}
+
+:root {
+    --bg-color: rgb(32, 219, 126);
+    --bg-color-dark: rgb(2, 44, 8);
+    --font-color: white;
+    --input-color: rgb(196, 193, 13);
+}
