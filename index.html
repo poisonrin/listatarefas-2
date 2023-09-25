@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>
-    <meta name="author" content="Wagner Cesar Vieira">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js" defer></script>
+    <title>Todo List</title>
 </head>
 <body>
     <header>
@@ -18,22 +16,27 @@
             </ul>
         </nav>
     </header>
-
     <main class="container">
-        <section class="titulo"></section>
+        <section class="todo_title">
+            Lista de tarefas
+        </section>
 
-        <section class="novoItem" id="novoItem">
+        <section class="todo_new-item" id="newItem">
             <section>&and;</section>
-            <input type="text" placeholder="Digite sua tarefa aqui">
+            <input type="text" placeholder="Digite e pressione enter para adicionar a tarefa">
             <section>&and;</section>
         </section>
 
-        <section class="todo__item"></section>
-    </main>
+        <section class="todo_list" id='todoList'>
 
-    <footer>
-        Made by @Wagner
-    </footer>
-    
+        </section>
+
+        
+    </main>
+    <script src="js/main.js"></script>
 </body>
+
+<footer>
+    Made by @Wagner
+</footer>
 </html>
