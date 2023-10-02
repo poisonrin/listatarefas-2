@@ -1,23 +1,32 @@
+/* Define as variáveis para manipulação das cores e fontes*/
 :root {
     --primary-color: rgb(141, 165, 213);
     --secondary-color: rgb(15, 23, 146);
+    --tertiary-color: rgb(8, 152, 150);
+    --color-font: rgb(255 255 255);
 }
 
+/* Reset das configurações dos navegadores*/
 * {
     margin: 0;
     padding: 0;
     outline: 0;
     box-sizing: border-box;
 }
+
+/* Ajusta o tamanho do rem (unidade base)
+   1 rem = 16px / 62,5% equivale a 10px*/
 html {
     font-size: 62.5%;
 }
 
+/* Seta o backgorund da página e define o tipo de fonte*/
 body {
     background-color: var(--primary-color);
     font: bold 2rem 'Open Sans', sans-serif;
 }
 
+/* Define o container da página*/
 .container {
     display: flex;
     width: 50vw;
@@ -27,6 +36,7 @@ body {
     gap: 15px;
 }
 
+/* Define as configurações do título*/
 .todo_title {
     display: flex;
     background-color: var(--secondary-color);
@@ -40,6 +50,7 @@ body {
     color: var(--primary-color);
 }
 
+/* Configura a seção que gera a lista de tarefas*/
 .todo_list {
     display: flex;
     width: 100%;
@@ -47,6 +58,7 @@ body {
     gap: 10px;
 }
 
+/* Define as configurações dos itens da lista*/
 .todo_item{
     display: flex;
     width: 100%;
@@ -56,14 +68,16 @@ body {
     padding: 5px;
     box-shadow: 1px 1px 5px var(--secondary-color);
 }
-.todo_item > div {
+
+.todo_item > section {
     width: 80%;
 }
+
 .todo_item:hover {
     cursor: pointer;
     transition: all .5s ease;
     background-color: var(--secondary-color);
-    color: var(--primary-color);
+    color: var(--color-font);
 }
 
 .todo_item > input[type='text'] {
@@ -79,13 +93,13 @@ body {
     font: inherit;
 }
 
-.todo__item > input[type='checkbox']:checked  + div {
+.todo_item > input[type='checkbox']:checked  + div {
     text-decoration:line-through;
 }
 
 .todo_new-item{
     display: flex;
-    background-color: #fff59d;
+    background-color: var(--tertiary-color);
     width: 100%;
     height: 70px;
     justify-content: space-evenly;
@@ -96,7 +110,7 @@ body {
 }
 
 .todo_new-item > input{
-    background-color: #fff59d;
+    background-color: var(--tertiary-color);
     border: none;
     width: 80%;
     outline: none;
@@ -106,4 +120,15 @@ body {
 .todo_new-item > input::placeholder {
     font-style: italic;
     font-weight: normal;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    position: absolute;
+    height: 50px;   
+    bottom: 0;
+    width: 100vw;
+    color: var(--color-font);
+    text-align: center;
+    padding-top: 10px;
 }
